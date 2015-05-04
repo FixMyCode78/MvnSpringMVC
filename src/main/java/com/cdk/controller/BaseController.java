@@ -19,7 +19,7 @@ public class BaseController {
 	public String welcome(ModelMap model) {
 
 		model.addAttribute("message", "Welcome");
-		model.addAttribute("counter", counter+=counter);
+		model.addAttribute("counter", counter+=1);
 		logger.debug("[welcome] counter : {}", counter);
 		return VIEW_INDEX;
 
@@ -29,7 +29,7 @@ public class BaseController {
 	public String welcomeName(@PathVariable String name, ModelMap model) {
 
 		model.addAttribute("message", "Welcome " + name);
-		model.addAttribute("counter", ++counter)
+		model.addAttribute("counter", counter);
 		logger.debug("[welcomeName] counter : {}", counter);
 		return VIEW_INDEX;
 
